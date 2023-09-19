@@ -1,0 +1,497 @@
+:root {
+    --primaire: #0065FC;
+    --secondaire: #DEEBFF;
+    --tertiaire: #F2F2F2;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+ul,li {
+    list-style-type: none;
+}
+img {
+    max-height : 100%;
+    width : auto;
+}
+h1,h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.1em;
+}
+i {
+    color: var(--primaire);
+}
+.grise {
+    color: var(--tertiaire);
+}
+/*--------------------------
+balise générales
+----------------------------*/
+.site {
+    padding: 50px 50px 0px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+header {
+    display: flex;
+    height: 20px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    gap: 60px;
+}
+li a {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+li a:hover {
+    color: var(--primaire);
+    border-top: 2px var(--primaire) solid;
+    padding-top: 48px;   
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.i-loc {
+    padding: 15px;
+    color: black;
+    background-color: var(--tertiaire);
+    border: 1px var(--tertiaire) solid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.loup {
+    background-color: var(--primaire);
+    padding: 15px;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    opacity: 0;
+}
+input {
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1em;
+    border-top: 2px var(--tertiaire) solid;
+    border-bottom: 2px var(--tertiaire) solid;
+    border-right: 1px var(--primaire) solid ;
+    border-left: 1px var(--tertiaire) solid;
+}
+button {
+    padding: 13px;
+    background-color: var(--primaire);
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+    border: 1px var(--primaire) solid;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+.filtres {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.filtre-item {
+    display: flex;
+    gap: 40px;
+    cursor: pointer;
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-style: solid;
+    border-color: var(--tertiaire);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.item:hover {
+    background-color: #DEEBFF;
+}
+.info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.info i {
+    border: 2px var(--tertiaire) solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 50% 50% 50% 50%;
+}
+.cadre {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.heber {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--tertiaire);
+    padding: 35px;
+    border-radius: 20px;
+}
+.bouton {
+    font-weight: 900;
+}
+.logements {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+.logement {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30%;
+    height: 200px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.308);
+}
+
+.logement .stars {
+    display: flex;
+    font-size: 13px;
+}
+.logement img {
+    width: 100%;
+    height: 110px;
+    border-radius: 18px 18px 0 0;
+    object-fit: cover; 
+}
+.populaire {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--tertiaire);
+    padding: 30px;
+    border-radius: 20px;
+}
+.titre-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.items_P {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.chambre {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100%;
+    height: 145px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.308);
+    cursor: pointer;
+}
+.chambre img {
+    width: 40%;
+    min-width: 39%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px 0px 0px 18px;
+}
+.chambre .stars {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: auto;
+    padding-bottom: 7px;
+    font-size: 13px;
+}
+.contenu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.visites {
+    display: flex;
+    gap: 45px;
+    margin-top: 25px;
+}
+.visite {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 300px;
+    height: 445px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.308);
+}
+.visite img {
+    width: 100%;
+    height: 87%;
+    object-fit: cover;
+    border-radius: 19px 19px 0px 0px;
+}
+.visite h3 {
+    display: flex;
+    align-items: center;
+    height: 13%;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: 900;
+}
+footer {
+    display: flex;
+    gap: 200px;
+    background-color: var(--tertiaire);
+    padding: 50px;
+    margin-top: 50px;
+}
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.lien {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.lien a:hover {
+    text-decoration: underline;
+}
+@media screen and (max-width: 1200px) {
+    .site {
+        padding: 40px 40px 0px 40px;
+    }
+    li a:hover {
+        padding-top: 38px;   
+    }
+    .intro {
+        margin-top: 55px;
+    }
+    form {
+        margin-bottom: 25px;
+    }
+    .filtres {
+        gap: 20px;
+    }
+    .filtre-item {
+        gap: 20px;
+    }
+    .info {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .cadre {
+        display: flex;
+        flex-direction: column;
+    }
+    .items_P {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+    .chambre img {
+        width: 40%;
+        height: 100%;
+    }
+    .chambre .contenu {
+        font-size: 14px;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    .logement .contenu {
+        padding-left: 7px;
+        font-size: 14px;
+    }
+    .activiter {
+        margin-top: 70px;
+    }
+    .visite {
+        height: 270px;
+    }
+    .visite img {
+        width: 100%;
+        height: 80%;
+    }
+    .visite h3 {
+        height: 20%;
+    }
+    footer {
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .site {
+        padding: 20px 0px 0px 0px;
+    }
+    header {
+        flex-direction: column;
+        margin-bottom: 100px;
+        gap: 50px;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        height: 20px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+    }
+    li {
+        display: block;
+        width: 100%;
+        border-bottom: 3px var(--tertiaire) solid;
+    }
+    li a {
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px 20px 0;
+    }
+    li a:hover {
+        padding-top: 0px;
+        border-top: 0px;
+    }
+    li:hover {
+        border-color: var(--primaire);
+    }
+    .intro {
+        padding-top: 25px;
+    }
+    input {
+        width: 100%;
+        max-width: 350px;
+    }
+    button {
+        display: none;
+    }
+    .loup {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .marge {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .filtres {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .filtre-item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        border-radius: 40px;
+        width: 100%;
+    }
+    .item {
+        width: 45%;
+        gap: 5px;
+        align-items: center;
+        padding-right: 5px;
+        padding-left: 10px;
+    }
+    .item i {
+        padding: 0px;
+        font-size: 22px;
+    }
+    .text {
+        font-size: 11px;
+    }
+    .cadre {
+        flex-direction: column-reverse;
+    }
+    .heber {
+        border-radius: 0px;
+        background-color: white;
+        padding: 20px;
+    }
+    .logements {
+        flex-direction: column;
+    }
+    .logement {
+        height: 200px;
+        width: auto;
+    }
+    .bouton {
+        display: none; 
+    }
+    .populaire {
+        border-radius: 0px;
+        padding: 20px;
+    }
+    .items_P {
+        flex-direction: column;
+    }
+    .chambre {
+        height: 145px;
+        width: auto;
+    }
+    .chambre img {
+        width: 40%;
+        height: 100%;
+    }
+    .activiter {
+        margin: 20px;
+    }
+    .visites {
+        flex-direction: column;
+    }
+    .visite {
+        height: 200px;
+        width: auto;
+    }
+    .visite img {
+        width: 100%;
+        height: 70%;
+    }
+    .visite h3 {
+        height: 30%;
+    }
+    .long {
+        gap: 20px;
+    }
+    footer {
+        flex-direction: column;
+    }
+}
